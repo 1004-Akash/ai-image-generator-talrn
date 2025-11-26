@@ -1,76 +1,84 @@
-🎨 AI-Powered Image Generator
-Talrn ML Internship – Assessment Submission
+# 🎨 AI-Powered Image Generator
+### **Talrn ML Internship – Assessment Submission**
 
-An end-to-end Text-to-Image Generation System powered by Stable Diffusion v1.5, featuring prompt enhancement, safety filtering, metadata logging, and an interactive Gradio UI.
+An end-to-end **Text-to-Image Generation System** powered by **Stable Diffusion v1.5**, featuring  
+prompt enhancement, safety filtering, metadata logging, and an interactive Gradio UI.
 
-📌 Project Highlights
+---
 
-🎨 Five Style Presets: Photorealistic, Artistic, Cartoon, Cinematic, Fantasy
+## 📌 Project Highlights
 
-🛡️ Safety Pipeline: NSFW prompt filtering + transparent watermark
+- 🎨 **Five Style Presets:** Photorealistic, Artistic, Cartoon, Cinematic, Fantasy  
+- 🛡️ **Safety Pipeline:** NSFW prompt filtering + transparent watermark  
+- 🤖 **Smart Prompt Engineering:** Style enhancement & negative prompts  
+- 💾 **Metadata Logging:** JSON file stored for every generated image  
+- 🌐 **Gradio Web UI:** Clean, intuitive, real-time interface  
+- ⚡ **Auto GPU/CPU Selection:** Optimized for both environments  
 
-🤖 Smart Prompt Engineering: Style enhancement & negative prompts
+---
 
-💾 Metadata Logging: JSON file stored for every generated image
+# 🏗️ Architecture Overview
 
-🌐 Gradio Web UI: Clean, intuitive, real-time interface
-
-⚡ Auto GPU/CPU Selection: Optimized for both environments
-
-🏗️ Architecture Overview
 ┌──────────────────────────────────────────────┐
-│                  Gradio UI                   │
-│  (Prompt, Style, Num Images, Steps, Seed)    │
+│ Gradio UI │
+│ (Prompt, Style, Num Images, Steps, Seed) │
 └───────────────────────────┬──────────────────┘
-                            │
-                            ▼
+│
+▼
 ┌──────────────────────────────────────────────┐
-│         Prompt Engineering Module             │
-│  - Safety Keyword Filtering                   │
-│  - Style Preset Enhancements                  │
-│  - Quality Boost Tags + Negative Prompts      │
+│ Prompt Engineering Module │
+│ - Safety Keyword Filtering │
+│ - Style Preset Enhancements │
+│ - Quality Boost Tags + Negative Prompts │
 └───────────────────────────┬──────────────────┘
-                            │
-                            ▼
+│
+▼
 ┌──────────────────────────────────────────────┐
-│           Stable Diffusion v1.5              │
-│  - CLIP Text Encoder                          │
-│  - U-Net Diffusion Model                      │
-│  - VAE Decoder                                │
-│  - DPM-Solver++ Scheduler                     │
+│ Stable Diffusion v1.5 │
+│ - CLIP Text Encoder │
+│ - U-Net Diffusion Model │
+│ - VAE Decoder │
+│ - DPM-Solver++ Scheduler │
 └───────────────────────────┬──────────────────┘
-                            │
-                            ▼
+│
+▼
 ┌──────────────────────────────────────────────┐
-│            Post-Processing Layer              │
-│  - AI Watermark                               │
-│  - Metadata Export (JSON)                     │
-│  - File Storage (/outputs/)                   │
+│ Post-Processing Layer │
+│ - AI Watermark │
+│ - Metadata Export (JSON) │
+│ - File Storage (/outputs/) │
 └──────────────────────────────────────────────┘
 
-🛠️ Tech Stack
-Component	Technology
-Model	Stable Diffusion v1.5
-Framework	PyTorch 2.x
-UI	Gradio 4.x
-Pipeline	HuggingFace Diffusers
-Scheduler	DPM-Solver++
-Metadata	JSON + Pillow
-Safety	Keyword Filter + SD Safety Checker
-🚀 Installation & Setup
-Prerequisites
 
-Python 3.10+
+---
 
-5GB free storage
+# 🛠️ Tech Stack
 
-RAM:
+| Component  | Technology |
+|-----------|------------|
+| Model     | Stable Diffusion v1.5 |
+| Framework | PyTorch 2.x |
+| UI        | Gradio 4.x |
+| Pipeline  | HuggingFace Diffusers |
+| Scheduler | DPM-Solver++ |
+| Metadata  | JSON + Pillow |
+| Safety    | Keyword Filter + SD Safety Checker |
 
-CPU: 16GB minimum
+---
 
-GPU: 8GB+ VRAM (recommended)
+# 🚀 Installation & Setup
 
-1. Clone the Repository
+### **Prerequisites**
+- Python **3.10+**  
+- At least **5GB free storage**  
+- RAM Requirements  
+  - CPU: **16GB minimum**  
+  - GPU: **8GB+ VRAM recommended**
+
+---
+
+## **1. Clone the Repository**
+
 git clone https://github.com/YOUR-USERNAME/ai-image-generator-talrn.git
 cd ai-image-generator-talrn
 
@@ -82,7 +90,7 @@ Google Colab (Recommended)
 
 Open ai_image_generator.ipynb
 
-Go to Runtime → Run all
+Runtime → Run all
 
 Click the generated Gradio URL
 
@@ -94,23 +102,23 @@ Minimum (CPU Mode)
 
 16GB RAM
 
-2–5 minutes/image
+2–5 minutes per image
 
 Recommended (GPU Mode)
 
-NVIDIA T4 / RTX 3060 / RTX 3080+
+NVIDIA T4 / RTX 3060 / 3080+
 
-~15–30 seconds/image
+~15–30 seconds per image
 
 Performance Benchmarks
 Platform	Device	RAM	Speed
 Colab Free	CPU	12GB	3–4 min/image
 Colab Pro	T4 GPU	25GB	20–25 sec/image
-Local	RTX 3080	32GB	12–18 sec/image
+Local System	RTX 3080	32GB	12–18 sec/image
 📖 Usage Guide
 Generating Images
 
-Launch the Gradio interface
+Launch Gradio interface
 
 Enter a text prompt
 
@@ -124,44 +132,47 @@ Steps (20–50 recommended)
 
 Seed (optional)
 
-Click “Generate Images”
+Click Generate Images
 
-View, download, and inspect metadata
+View & download output + metadata
 
 ✨ Example Prompts
+Landscape
 
-Landscape:
 "A serene mountain lake at golden hour, mist rising, ultra detailed"
 
-Portrait:
+Portrait
+
 "Cyberpunk warrior portrait, neon lights, hyper-realistic lens effects"
 
-Fantasy:
+Fantasy
+
 "Ancient mystical forest with glowing spirits and fog, fantasy art"
 
-Cartoon:
+Cartoon
+
 "Cute cat wizard casting a spell, colorful cartoon style"
 
 💡 Prompt Engineering Tips
-✔️ Be Specific
 
-Bad: “a car”
-Good: “A red sports car drifting on a mountain road during sunset”
+✔️ Be Specific
+❌ "a car"
+✔️ "A red sports car drifting on a mountain road during sunset"
 
 ✔️ Use Quality Enhancers
 
-“highly detailed”,
+highly detailed
 
-“4K”,
+4K
 
-“sharp focus”,
+sharp focus
 
-“professional lighting”
+professional lighting
 
 ✔️ Use Negative Prompts
-
 Default negatives:
-"blurry, distorted, low quality, deformed, watermark"
+
+blurry, distorted, low quality, deformed, watermark
 
 ⚠️ Limitations
 
@@ -173,22 +184,22 @@ Gradio share links expire after 72 hours
 
 Minor facial imperfections may occur
 
-False positives in safety filtering are possible
+Some prompts may be incorrectly flagged as unsafe
 
 🚀 Future Improvements
 v2.0 (Near Term)
 
-Support for 768×768 and 1024×1024
+Support 768×768 & 1024×1024
 
 Batch prompt input
 
-ControlNet for pose/edges
+ControlNet for pose/edge conditioning
 
 Image-to-image generation
 
 v3.0 (Mid Term)
 
-LoRA fine-tuning on user data
+LoRA fine-tuning
 
 Inpainting & outpainting
 
@@ -196,13 +207,13 @@ Style transfer
 
 v4.0 (Long Term)
 
-Text-to-video generation
+Text-to-video
 
 3D asset generation
 
-Public REST API
+Full REST API
 
-Mobile app
+Mobile application
 
 📂 Project Structure
 ai-image-generator-talrn/
@@ -222,44 +233,3 @@ ai-image-generator-talrn/
     ├── ARCHITECTURE.md
     ├── PROMPT_GUIDE.md
     └── TROUBLESHOOTING.md
-
-🔒 Ethical Use & Safety
-
-No NSFW content (auto-blocked)
-
-All images watermarked as AI-generated
-
-Prompts and outputs logged for transparency
-
-Avoid harmful, abusive, or copyrighted content
-
-👤 Author
-
-Your Name
-ML Intern Candidate – Talrn.com
-
-📧 Email: your.email@example.com
-
-🔗 LinkedIn: https://linkedin.com/in/your-profile
-
-🐱 GitHub: https://github.com/your-username
-
-📞 Submission Details
-
-Submitted for: Talrn ML Internship
-
-Submission Date: November 26, 2025
-
-Availability: Immediate (or specify)
-
-Work Preference: Remote / Hybrid / On-site
-
-🙏 Acknowledgments
-
-Stability AI – Stable Diffusion
-
-HuggingFace – Diffusers
-
-Gradio – Interface Framework
-
-Talrn.com – Opportunity
