@@ -1,6 +1,10 @@
 # 🎨 AI-Powered Image Generator
 ### **Talrn ML Internship – Assessment Submission**
 
+### TRY ###
+https://2c71e48cf6897dc564.gradio.live/
+
+
 An end-to-end **Text-to-Image Generation System** powered by **Stable Diffusion v1.5**, featuring  
 prompt enhancement, safety filtering, metadata logging, and an interactive Gradio UI.
 
