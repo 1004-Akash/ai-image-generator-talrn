@@ -17,6 +17,14 @@ prompt enhancement, safety filtering, metadata logging, and an interactive Gradi
 
 ---
 
+## OUTPUT
+
+<img width="462" height="453" alt="Screenshot 2025-11-26 231052" src="https://github.com/user-attachments/assets/4703733a-d2b3-4f4f-810e-b16f203b6a3c" />
+<img width="455" height="457" alt="Screenshot 2025-11-26 231124" src="https://github.com/user-attachments/assets/20e4fec8-b781-42da-9ab9-e07508a1dc46" />
+<img width="460" height="457" alt="Screenshot 2025-11-26 231148" src="https://github.com/user-attachments/assets/c900dc0c-60f1-481f-8f0b-1eb5fce54f61" />
+
+
+
 # 🏗️ Architecture Overview
 
 ┌──────────────────────────────────────────────┐
